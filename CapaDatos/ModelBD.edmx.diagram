@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="ab9f5ed23f5d42a2ad58b0329d9bdcc0" Name="Diagram1">
+        <EntityTypeShape EntityType="DATAMONOGRAFIAModel.Estudiante" Width="1.5" PointX="3" PointY="2.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DATAMONOGRAFIAModel.Monografia" Width="1.5" PointX="0.75" PointY="2.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DATAMONOGRAFIAModel.Monografia_Profesor" Width="1.5" PointX="0.75" PointY="6.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DATAMONOGRAFIAModel.Profesor" Width="1.5" PointX="3.25" PointY="6.125" IsExpanded="true" />
+        <AssociationConnector Association="DATAMONOGRAFIAModel.FK_Monografia" ManuallyRouted="false" />
+        <AssociationConnector Association="DATAMONOGRAFIAModel.FK_Monografia_prof" ManuallyRouted="false" />
+        <AssociationConnector Association="DATAMONOGRAFIAModel.FK_Profesor_mon" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
