@@ -201,12 +201,6 @@ namespace AEDFINAL
             }
         }
 
-
-        private void txtidjurado1_TextChanged(object sender, EventArgs e)
-        {
-            VerificarProfesor(txtidjurado1, lblNombreJurado1);
-        }
-
         private bool VerificarIdentificaciones(string textoABuscar, TextBox textBoxIgnorar)
         {
             foreach (Control control in this.Controls)
@@ -218,6 +212,12 @@ namespace AEDFINAL
             }
             return true;
         }
+
+        private void txtidjurado1_TextChanged(object sender, EventArgs e)
+        {
+            VerificarProfesor(txtidjurado1, lblNombreJurado1);
+        }
+
 
         private void txtidjurado3_TextChanged_1(object sender, EventArgs e)
         {
