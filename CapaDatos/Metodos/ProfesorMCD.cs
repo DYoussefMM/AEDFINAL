@@ -41,16 +41,5 @@ namespace CapaDatos.Metodos
             }
         }
 
-        // Busca y devuelve una lista de profesores específicos por su nombre.
-        public List<Profesor> ListarProfesoresPorNombre(string nombreProfesor)
-        {
-            using (var db = new DatosMonEntities())
-            {
-                return db.Profesor
-                         .Where(p => p.Nombre.Contains(nombreProfesor))
-                         .ToList();
-            }
-        }
-
     }
 }
