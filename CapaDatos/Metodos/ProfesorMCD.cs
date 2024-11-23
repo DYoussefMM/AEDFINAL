@@ -8,19 +8,6 @@ namespace CapaDatos.Metodos
 {
     public class ProfesorMCD
     {
-        // Busca un profesor por su ID y devuelve el índice en la lista.
-        public int BuscarProfesor(int idProfesor)
-        {
-            using (var db = new DatosMonEntities())
-            {
-                var profesor = db.Profesor.FirstOrDefault(p => p.Idprofesor == idProfesor);
-                if (profesor == null)
-                    return -1;
-
-                // Simula el índice en la lista completa de profesores
-                return db.Profesor.ToList().FindIndex(p => p.Idprofesor == idProfesor);
-            }
-        }
 
         // Agrega un profesor si no existe ya en la base de datos.
         public bool AgregarProfesor(Profesor profesor)

@@ -14,24 +14,7 @@ namespace CapaDatos.Metodos
     public class MonografiaManager
     {
 
-        // Busca una monografía por su ID.
-        public Monografia BuscarMonografia(int idMonografia)
-        {
-            using (var dbContext = new DatosMonEntities())
-            {
-                return dbContext.Monografia.Find(idMonografia);
-            }
-        }
-
-        // Busca una monografía por su título.
-        public Monografia BuscarMonografiaTitulo(string nombre)
-        {
-            using (var dbContext = new DatosMonEntities())
-            {
-                return dbContext.Monografia
-                    .FirstOrDefault(m => m.Titulo.Equals(nombre, StringComparison.OrdinalIgnoreCase));
-            }
-        }
+   
 
         // Agrega una nueva monografía si no existe.
         public bool InsertarMonografia(Monografia mon, Monografia_Profesor[] profesores)

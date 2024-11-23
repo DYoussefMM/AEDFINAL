@@ -29,24 +29,6 @@ namespace CapaNegocio.Metodos
         //    return _monografiaProfesorMCD.AgregarRol(monografiaProfesor);
         //}
 
-        // Lista todos los datos de la relación Monografía_Profesor.
-        public List<Monografia_Profesor> ListarDatos()
-        {
-            return _monografiaProfesorMCD.ListarDatos();
-        }
-
-        // Lista las monografías en las que un profesor actúa como tutor.
-        public List<MonografiaCN> ListarMonografiasPorTutor(int tutorId)
-        {
-            var monografias = _monografiaProfesorMCD.ListarMonografiasPorTutor(tutorId); // Llamada a la Capa de Datos
-
-            // Mapea las monografías a DTOs para ser devueltos
-            return monografias.Select(m => new MonografiaCN
-            {
-                Titulo = m.Titulo,
-            }).ToList();
-        }
-
         // Lista las monografías en las que un profesor actúa como tutor en un rango de fechas.
         public List<MonografiaCN> MonografiasPorTutor(int idTutor, DateTime fechaInicio, DateTime fechaFin)
         {

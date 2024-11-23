@@ -93,11 +93,11 @@ namespace AEDFINAL
                     };
 
                     EstudianteCN[] estudiantes = new[]
-         {
-            new EstudianteCN { Carnet = txtcarnetestudiante1.Text },
-            new EstudianteCN { Carnet = txtcarnetestudiante2.Text },
-            new EstudianteCN { Carnet = txtcarnetestudiante3.Text }
-        };
+                    {
+                        new EstudianteCN { Carnet = txtcarnetestudiante1.Text },
+                        new EstudianteCN { Carnet = txtcarnetestudiante2.Text },
+                        new EstudianteCN { Carnet = txtcarnetestudiante3.Text }
+                    };
 
                     // Llamar al servicio de la capa de negocio
                     bool resultado = monografiaService.InsertarMonografia(monografia, promon, estudiantes);

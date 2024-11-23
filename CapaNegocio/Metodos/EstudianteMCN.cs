@@ -18,14 +18,6 @@ namespace CapaNegocio.Metodos
             _estudianteMCD = new EstudianteMCD(); // Inicialización de la capa de datos
         }
 
-        // Busca un estudiante por su carnet y devuelve su índice en la lista.
-        public int BuscarEstudiante(string carnet)
-        {
-            if (string.IsNullOrEmpty(carnet))
-                throw new ArgumentException("El carnet no puede estar vacío.");
-
-            return _estudianteMCD.BuscarEstudiante(carnet);
-        }
 
         // Agrega un estudiante al sistema, validando que no exista previamente.
         public bool InsertarEstudiante(EstudianteCN estudianteCN)
@@ -51,23 +43,6 @@ namespace CapaNegocio.Metodos
             return _estudianteMCD.AgregarEstudiante(estudiante);
         }
 
-
-        // Asocia una monografía a un estudiante existente.
-        public bool AgregarMonografia(EstudianteCN estudianteCN)
-        {
-            if (estudianteCN == null || estudianteCN.Idmonografia == null)
-                throw new ArgumentException("El estudiante y el ID de la monografía son obligatorios.");
-
-            // Mapear el DTO a la entidad de datos
-            Estudiante estudiante = new Estudiante
-            {
-                Carnet = estudianteCN.Carnet,
-                Idmonografia = estudianteCN.Idmonografia
-            };
-
-            // Llamar a la Capa de Datos
-            return _estudianteMCD.AgregarMonografia(estudiante);
-        }
 
         // Devuelve una lista de todos los estudiantes registrados.
         public List<EstudianteCN> ListarEstudiantes()

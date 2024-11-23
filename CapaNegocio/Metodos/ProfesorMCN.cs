@@ -18,14 +18,6 @@ namespace CapaNegocio.Metodos
             _profesorMCD = new ProfesorMCD(); // Inicializa la capa de datos
         }
 
-        // Busca un profesor por su ID y devuelve su índice.
-        public int BuscarProfesor(int idProfesor)
-        {
-            if (idProfesor <= 0)
-                throw new ArgumentException("El ID del profesor debe ser mayor que 0.");
-
-            return _profesorMCD.BuscarProfesor(idProfesor);
-        }
 
         // Agrega un profesor al sistema, validando que no exista previamente.
         public bool InsertarProfesor(ProfesorCN pro)
@@ -80,24 +72,6 @@ namespace CapaNegocio.Metodos
                 Nombre = profesor.Nombre,
                 Apellido = profesor.Apellido
             };
-        }
-
-        // Busca y devuelve una lista de profesores que coinciden con un nombre.
-        public List<ProfesorCN> BuscarProfesoresPorNombre(string nombre)
-        {
-
-            var profesor = _profesorMCD.ListarProfesoresPorNombre(nombre).Select(e => new ProfesorCN
-            {
-                Idprofesor = e.Idprofesor,
-                Nombre = e.Nombre,
-                Apellido = e.Apellido,
-                Direccion = e.Direccion,
-                Telefono = e.Telefono.HasValue ? (int?)e.Telefono.Value : null,
-                FechaNacimiento = e.FechaNacimiento
-            }).ToList();
-
-            return profesor;
-
         }
     }
 }

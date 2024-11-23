@@ -13,19 +13,7 @@ namespace Datos
 {
     public class EstudianteMCD
     {
-        // Busca el índice de un estudiante por su carnet.
-        public int BuscarEstudiante(string carnetBuscar)
-        {
-            using (var db = new DatosMonEntities())
-            {
-                var estudiante = db.Estudiante.FirstOrDefault(e => e.Carnet == carnetBuscar);
-                if (estudiante == null)
-                    return -1;
-
-                // Simulación de índice en base al orden actual en la base de datos
-                return db.Estudiante.ToList().FindIndex(e => e.Carnet == carnetBuscar);
-            }
-        }
+  
 
         //Agrega un nuevo estudiante a la base de datos.
         public bool AgregarEstudiante(Estudiante estudiante)

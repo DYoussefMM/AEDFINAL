@@ -99,7 +99,7 @@
             this.txtNota.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtNota.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNota.Location = new System.Drawing.Point(794, 161);
-            this.txtNota.MaxLength = 100;
+            this.txtNota.MaxLength = 3;
             this.txtNota.Name = "txtNota";
             this.txtNota.Size = new System.Drawing.Size(194, 25);
             this.txtNota.TabIndex = 79;
@@ -126,6 +126,7 @@
             this.txtTiempoOtorgado.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtTiempoOtorgado.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTiempoOtorgado.Location = new System.Drawing.Point(1049, 58);
+            this.txtTiempoOtorgado.MaxLength = 10;
             this.txtTiempoOtorgado.Name = "txtTiempoOtorgado";
             this.txtTiempoOtorgado.Size = new System.Drawing.Size(194, 25);
             this.txtTiempoOtorgado.TabIndex = 82;
